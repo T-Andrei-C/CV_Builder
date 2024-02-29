@@ -1,5 +1,5 @@
 
-const token = "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";
+const token = "Bearer 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";
 
 export const getAllGitRepositories = async () => {
     const request = await fetch("https://api.github.com/users/T-Andrei-C/repos", {
@@ -16,6 +16,15 @@ export const getAllRepositoryLanguages = async (repositoryName) => {
             "Authorization" : token
         }
     });
+    return await request.json();
+}
+
+export const getReadMeForRepository = async (repositoryName) => {
+    const request = await fetch(`https://api.github.com/repos/T-Andrei-C/${repositoryName}/readme`, {
+        headers: {
+            "Authorization" : token
+        }
+    })
     return await request.json();
 }
 

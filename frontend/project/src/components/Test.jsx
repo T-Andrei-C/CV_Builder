@@ -13,6 +13,7 @@ const Test = () => {
             setGitLanguagesColors(colors);
         })
     }, []);
+
     // const test = atob(gitRepositories?.content);
     // console.log(test?.split("(")?.find(word => word.startsWith("http")));
     //
@@ -24,7 +25,7 @@ const Test = () => {
     return (
         // <img alt="here" src={gitRepositories.split(/[()\n ]/).find(word => word.startsWith("http"))}/>
         //   <h1 className="">here</h1>
-        <div className="inline-grid grid-cols-4">
+        <div className="inline-grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 exsm:grid-cols-2">
             {gitRepositories && gitRepositories.map(repository => (
                 <RepositoryCard gitRepository={repository} languagesColors={gitLanguagesColors}/>
             ))}
