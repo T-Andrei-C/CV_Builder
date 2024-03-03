@@ -1,5 +1,5 @@
 
-const auth = `Bearer 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`;
+const auth = `Bearer ${process.env["REACT_APP_GIT_TOKEN"]}`;
 
 export const getAllGitRepositories = async () => {
     const request = await fetch("https://api.github.com/users/T-Andrei-C/repos", {
