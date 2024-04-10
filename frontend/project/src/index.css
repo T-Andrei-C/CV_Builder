@@ -2,3 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+.light {
+    --highlight-color: 72, 75, 106;
+    --primary-color: 228, 229, 241;
+    --secondary-color: 210, 211, 219;
+    --background-color: 243, 244, 246;
+    --navbar-color: 228, 229, 241;
+    --navbar-text-color: 72, 75, 106;
+}
+
+.dark {
+    --highlight-color: 188, 204, 220;
+    --primary-color: 72, 101, 129;
+    --secondary-color: 72, 101, 129;
+    --background-color: 16, 42, 67;
+    --navbar-color: 188, 204, 220;
+    --navbar-text-color: 16, 42, 67;
+}
+
+.green {
+    --highlight-color: 208, 242, 159;
+    --primary-color: 121, 189, 168;
+    --secondary-color: 119, 176, 176;
+    --background-color: 59, 134, 134;
+    --navbar-color: 208, 242, 159;
+    --navbar-text-color: 59, 134, 134;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+.green::-webkit-scrollbar-track {
+    background: white;
+}
+
+.green::-webkit-scrollbar-thumb {
+    background: rgb(208, 242, 159);
+    @apply rounded-full border-solid border-[4px] border-white
+}
+
+.dark::-webkit-scrollbar-track {
+    background: white;
+}
+
+.dark::-webkit-scrollbar-thumb {
+    background: rgb(188, 204, 220);;
+    @apply rounded-full border-solid border-[4px] border-white
+}
+
+.light::-webkit-scrollbar-track {
+    background: white;
+}
+
+.light::-webkit-scrollbar-thumb {
+    background: rgb(72, 75, 106);;
+    @apply rounded-full border-solid border-[4px] border-white
+}
+
+.isDisabled {
+    pointer-events: none;
+    transition: margin 1000ms ease-in-out, opacity 1000ms ease-in-out;
+    margin-top: 5em;
+    opacity: 0.5;
+}
+
+.isEnabled {
+    transition: margin 1000ms ease-in-out, opacity 1000ms ease-in-out;
+}
